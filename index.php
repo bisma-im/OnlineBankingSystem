@@ -1,12 +1,30 @@
-<?php
-   include('session.php');
+<?php 
+    include("functions/connection.php")
 ?>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <title>Welcome </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-   <h1>Welcome <?php echo $login_session; ?></h1> 
-   <h2><a href = "#">Sign Out</a></h2>
+    <div>
+        <form id="loginForm" method="POST">
+            <h1>Login Form</h1>
+            <div>
+                <label>Email</label>
+                <input type="email" placeholder="Email" id="email" name="email" />
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" placeholder="Password" id="password" name="password" />
+            </div>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

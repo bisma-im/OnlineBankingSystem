@@ -1,5 +1,5 @@
 <?php 
-    include("connection.php");
+    include("functions/connection.php");
 
     session_start();
     $error='';
@@ -9,7 +9,7 @@
         $email = $_POST['email'];
         $pass = $_POST['password'];
 
-        $sql = "SELECT * FROM customer WHERE email = '$email' and password = '$pass'";
+        $sql = "SELECT * FROM employee WHERE email = '$email' and password = '$pass'";
 
         $result = mysqli_query($conn, $sql);      
         $row = mysqli_num_rows($result);      
