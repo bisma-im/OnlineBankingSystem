@@ -1,5 +1,5 @@
 <?php 
-    include("functions/connection.php")
+    include "functions/connection.php";
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
 </head>
 <body>
     <div>
-        <form id="loginForm" method="POST">
+        <form id="loginForm" method="POST" action="functions/login_functions.php" onsubmit="return isValid()">
             <h1>Login Form</h1>
             <div>
                 <label>Email</label>
@@ -26,5 +26,17 @@
             </div>
         </form>
     </div>
+    <script>
+        function isValid(){
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if(email === "" || password === ""){
+                alert("Email or Password field is empty");
+                return false;
+            }
+            return true; // Return true if the form is valid
+        }
+    </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-   include('functions/session.php');
+   include "functions/session.php";
 ?>
 <html>
 <head>
